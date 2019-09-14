@@ -1,0 +1,75 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Copyright (C) 2018-2019 YuZJ.
+%使用CC-BY-NC-SA授权。一份完整版本的许可证已位于附录。这个版本原始作者YuZJ，
+%邮箱【邮箱】（最后连接于【时间】）。
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{book}
+\usepackage{xeCJK} %中文支持
+\setCJKsansfont{SourceHanSansCN-ExtraLight.otf}
+\setCJKmonofont{SourceCodePro-Light.otf}
+\setCJKmainfont{SourceHanSerifSC-ExtraLight.otf}
+\setCJKfamilyfont{bolded}{SourceHanSansSC-Bold.otf}
+\renewcommand{\bf}{\CJKfamily{bolded}}  
+\newcommand{\normalall}{\normalsize\normalfont\normalcolor}  
+\usepackage{color}
+\usepackage{graphicx}  %生成图片
+\usepackage{geometry} %设置页面排版
+\geometry{top=0.5in, bottom=0.5in, left=0.5in, right=0.5in, papersize={21cm,29.7cm}}
+\usepackage[super]{nth} %生成序数词
+\bibliographystyle{unsrt}
+\usepackage{metalogo} %生成TeX标志
+\usepackage{texnames} %生成TeX标志
+\usepackage{fancybox} %生成带阴影的盒子
+\shadowsize=2pt %配置盒子
+\usepackage{shorttoc}
+\usepackage{flafter}%使得所有浮动体不能被放置在其浮动环境之前
+\usepackage{picinpar} %生成文本环绕
+\usepackage{indentfirst}%生成段落
+\usepackage[toc]{multitoc}%双栏目录
+\usepackage{amssymb}%显示方块
+\makeatletter\renewcommand{\verbatim@font}{\footnotesize \color{blue}\texttt} \makeatletter%修改verbatim环境格式
+ %生成章节中文名和盒子
+\renewcommand{\thechapter}{\arabic{chapter}}
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+\renewcommand{\thesubsection}{\arabic{chapter}.\arabic{section}.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{chapter}.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+\usepackage{titlesec}
+\renewcommand{\bibname}{参考文献}
+\renewcommand{\contentsname}{目录}
+\renewcommand{\appendixname}{附录}
+\titleformat{\chapter}[frame]{\bf \Huge}{\small 第 \thechapter 部分}{0pt}{}
+\titleformat{\section}[frame]{\bf  \LARGE}{\small 第 \thesection 章}{0pt}{}
+\titleformat{\subsection}[frame]{\bf  \Large}{\small  第\thesubsection 节}{0pt}{}
+\titleformat{\subsubsection}[frame]{\bf \large}{\small 第\thesubsubsection 小节}{0pt}{}
+\linespread{1.2} %行距命令
+\usepackage{eso-pic}%背景图像命令
+\usepackage[backref]{hyperref} %生成书签，这个应被放在末尾
+\hypersetup{hidelinks,bookmarks=true,bookmarksopen=true,pdftitle=EMACS 26.2中文手册,pdfauthor=YuZJ}
+\begin{document}
+\setcounter{tocdepth}{5}
+\begin{titlepage}	
+\AddToShipoutPictureBG*{\includegraphics[width=21cm,height=29.7cm]{pic/face.png}}
+{\color{white}{
+\vspace*{10mm}
+\begin{center}
+\doublebox{\parbox{18cm}{
+\begin{center}	
+\Ovalbox{\Huge \bf EMACS 26.2中文手册\normalsize}\\\vspace*{5mm}\bf \large 作者：YuZJ \\\vspace*{5mm} 编译日期：\today	
+\end{center}}}
+\end{center}}}
+\vspace*{25mm}\normalall
+\shadowbox{\parbox[t]{8cm}{{\color{white}{【简介】}}}}
+\end{titlepage}
+\begin{center}
+	\Huge \bf 【版本号】 \normalall
+\end{center}
+\shorttoc{简明目录}{1}
+\tableofcontents
+\input{Chap1}
+\appendix
+\renewcommand{\thechapter}{\arabic{chapter}}
+\input{Appendix}
+\addcontentsline{toc}{chapter}{参考文献}
+\bibliography{Reference}
+全书结束。
+\end{document}
