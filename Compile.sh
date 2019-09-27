@@ -10,7 +10,7 @@ rm -f *.fdb_latexmk
 echo Start XeLaTeX......1/5
 xelatex Main.tex
 #echo BiBTeX......2/5
-#bibtex Main
+bibtex Main
 echo XeLaTeX...... 3/5
 xelatex Main.tex
 echo XeLaTeX...... 4/5

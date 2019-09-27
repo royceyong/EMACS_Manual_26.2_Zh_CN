@@ -57,19 +57,18 @@
 \setcounter{tocdepth}{5}
 \begin{titlepage}	
 \AddToShipoutPictureBG*{\includegraphics[width=21cm,height=29.7cm]{pic/face.png}}
-{\color{white}{
 \vspace*{10mm}
 \begin{center}
-\doublebox{\parbox{18cm}{
+{\color{white}\doublebox{\parbox{18cm}{
 \begin{center}	
-\Ovalbox{\Huge \bf EMACS 26.2中文手册\normalsize}\\\vspace*{5mm}\bf \large 译者：YuZJ \\\vspace*{5mm} 编译日期：\today	
-\end{center}}}
-\end{center}}}
+\Ovalbox{\Huge \bf A GNU Manual：EMACS 26.2中文手册\normalsize}\\\vspace*{5mm}\bf \large 译者：YuZJ \\\vspace*{5mm} 编译日期：\today	
+\end{center}}}}
+\end{center}
 \vspace*{25mm}\normalall
 \shadowbox{\parbox[t]{8cm}{{\color{white}{【简介】}}}}
 \end{titlepage}
 \begin{center}
-	\Huge \bf $17^{th}$ Edition, Updated for Emacs version 26.2\\中文第1.0版 \normalall
+	\Huge \bf \textbf{$17^{th}$ edition, Updated for Emacs version 26.2}\\中文第1.0版 \normalall
 \end{center}
 \input{OriCover}
 \shorttoc{简明目录}{1}
@@ -83,4 +82,6 @@
 \input{FDL}
 \input{GNUManifesto}
 全书结束。
+\addcontentsline{toc}{chapter}{参考文献}
+\bibliography{Reference}
 \end{document}
